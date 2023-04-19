@@ -1,8 +1,4 @@
 {
-  "extends": "next",
-  "settings": {
-    "next": {
-      "rootDir": "packages/my-app/"
-    }
-  }
+	"extends": "next",
+	"settings": {}
 }
