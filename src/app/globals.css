@@ -6,6 +6,9 @@
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
+	--primary-color: #210f31;
+	--secondary-color: #23a1aa;
+	--text-color-white-rgb: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,10 +18,13 @@
 		--background-end-rgb: 0, 0, 0;
 	}
 }
-.button-blue {
-	background-color: #23a1aa;
+button {
+	color: var(--text-color-white-rgb);
+}
+button.primary {
+	background-color: var(--secondary-color);
 }
 body {
 	color: rgb(var(--foreground-rgb));
-	background: #210f31;
+	background: var(--primary-color);
 }
