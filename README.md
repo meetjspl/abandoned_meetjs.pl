@@ -1,6 +1,6 @@
 # meet.js website
 
-Our community has survived without a website l0ong enough. Let's finally make one.
+Our community has survived without a website long enough. Let's finally make one.
 
 Existing website for the _meet.js Summit_ conferences: [summit.meetjs.pl](https://summit.meetjs.pl)
 
