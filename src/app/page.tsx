@@ -14,7 +14,7 @@ export default function Home() {
 				<Logo />
 				<Link href="https://facebook.com/meetjspl/">
 					<Button shape="pill" variant="social" className=" duration-300 ease-in hover:scale-110">
-						<FaFacebook className="mb-1 mr-2 inline  " />
+						<FaFacebook className="mb-1 mr-2 inline" />
 						Facebook
 					</Button>
 				</Link>
