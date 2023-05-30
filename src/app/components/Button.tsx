@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 const defaultStyles = "cursor-pointer m-10 w-60 px-9  py-5 text-2xl";
 const shapes = {
 	square: "",
-	pill: "rounded-full ",
+	pill: "rounded-full",
 };
 const variants = {
 	default: "primary",
