@@ -10,7 +10,7 @@ const _inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 	return (
 		<>
-			<main className="flex min-h-screen flex-col items-center p-10 ">
+			<main className="flex min-h-screen flex-col items-center p-10">
 				<Logo />
 				<Link href="https://facebook.com/meetjspl/">
 					<Button shape="pill" variant="social" className=" duration-300 ease-in hover:scale-110">
