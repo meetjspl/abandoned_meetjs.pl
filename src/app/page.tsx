@@ -12,14 +12,14 @@ export default function Home() {
 		<>
 			<main className="flex min-h-screen flex-col items-center bg-purple p-10">
 				<Logo />
-
 				<Button
 					shape="pill"
 					variant="social"
-					className="bg-blue text-white duration-300 ease-in hover:scale-110"
+					className=" bg-blue text-white duration-300 ease-in hover:scale-110"
 				>
 					<Link href="/facebook">
-						<FaFacebook className="mb-1 mr-2 inline  " />
+						{" "}
+						<FaFacebook className="mb-1 mr-2 inline" />
 						Facebook
 					</Link>
 				</Button>
@@ -30,7 +30,7 @@ export default function Home() {
 					className="bg-blue text-white duration-300 ease-in hover:scale-110"
 				>
 					<Link href="/discord">
-						<FaDiscord className="mb-1 mr-2 inline " />
+						<FaDiscord className="mb-1 mr-2 inline" />
 						Discord
 					</Link>
 				</Button>
@@ -41,7 +41,7 @@ export default function Home() {
 					className="bg-blue text-white duration-300 ease-in hover:scale-110"
 				>
 					<Link href="/summit/2023">
-						<CgWebsite className="mb-1 mr-2 inline " />
+						<CgWebsite className="mb-1 mr-2 inline" />
 						Summit
 					</Link>
 				</Button>
