@@ -10,26 +10,41 @@ const _inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 	return (
 		<>
-			<main className="flex min-h-screen flex-col items-center p-10">
+			<main className="flex min-h-screen flex-col items-center bg-purple p-10">
 				<Logo />
-				<Link href="https://facebook.com/meetjspl/">
-					<Button shape="pill" variant="social" className=" duration-300 ease-in hover:scale-110">
+
+				<Button
+					shape="pill"
+					variant="social"
+					className="bg-blue text-white duration-300 ease-in hover:scale-110"
+				>
+					<Link href="/facebook">
 						<FaFacebook className="mb-1 mr-2 inline  " />
 						Facebook
-					</Button>
-				</Link>
-				<Link href="https://discord.gg/UycCSpRh6j">
-					<Button shape="pill" variant="social" className=" duration-300 ease-in hover:scale-110">
+					</Link>
+				</Button>
+
+				<Button
+					shape="pill"
+					variant="social"
+					className="bg-blue text-white duration-300 ease-in hover:scale-110"
+				>
+					<Link href="/discord">
 						<FaDiscord className="mb-1 mr-2 inline " />
 						Discord
-					</Button>
-				</Link>
-				<Link href="https://summit.meetjs.pl/2023/">
-					<Button shape="pill" variant="social" className=" duration-300 ease-in hover:scale-110">
+					</Link>
+				</Button>
+
+				<Button
+					shape="pill"
+					variant="social"
+					className="bg-blue text-white duration-300 ease-in hover:scale-110"
+				>
+					<Link href="/summit/2023">
 						<CgWebsite className="mb-1 mr-2 inline " />
 						Summit
-					</Button>
-				</Link>
+					</Link>
+				</Button>
 			</main>
 		</>
 	);
