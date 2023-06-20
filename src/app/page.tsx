@@ -2,9 +2,8 @@ import { Inter } from "next/font/google";
 
 import { FaFacebook, FaDiscord } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
-import Link from "next/link";
 import Logo from "./components/Logo";
-import Button from "./components/Button";
+import ExternalLink from "./components/ExternalLink";
 const _inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -12,39 +11,40 @@ export default function Home() {
 		<>
 			<main className="flex min-h-screen flex-col items-center bg-purple p-10">
 				<Logo />
-				<Button
-					shape="pill"
-					variant="social"
-					className=" bg-blue text-white duration-300 ease-in hover:scale-110"
-				>
-					<Link href="/facebook">
-						{" "}
-						<FaFacebook className="mb-1 mr-2 inline" />
-						Facebook
-					</Link>
-				</Button>
 
-				<Button
+				<ExternalLink
+					button
 					shape="pill"
 					variant="social"
-					className="bg-blue text-white duration-300 ease-in hover:scale-110"
+					className="bg-blue text-center text-white duration-300 ease-in hover:scale-110"
+					href="/facebook"
 				>
-					<Link href="/discord">
-						<FaDiscord className="mb-1 mr-2 inline" />
-						Discord
-					</Link>
-				</Button>
+					{" "}
+					<FaFacebook className="mb-1 mr-2 inline" />
+					Facebook
+				</ExternalLink>
 
-				<Button
+				<ExternalLink
+					button
 					shape="pill"
 					variant="social"
-					className="bg-blue text-white duration-300 ease-in hover:scale-110"
+					className="bg-blue text-center text-white duration-300 ease-in hover:scale-110"
+					href="/discord"
 				>
-					<Link href="/summit/2023">
-						<CgWebsite className="mb-1 mr-2 inline" />
-						Summit
-					</Link>
-				</Button>
+					<FaDiscord className="mb-1 mr-2 inline" />
+					Discord
+				</ExternalLink>
+
+				<ExternalLink
+					button
+					shape="pill"
+					variant="social"
+					className="bg-blue text-center text-white duration-300 ease-in hover:scale-110"
+					href="/summit/2023"
+				>
+					<CgWebsite className="mb-1 mr-2 inline" />
+					Summit
+				</ExternalLink>
 			</main>
 		</>
 	);

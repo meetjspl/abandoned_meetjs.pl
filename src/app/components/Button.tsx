@@ -24,3 +24,4 @@ export default function Button({
 }: ButtonProps) {
 	return <button className={twMerge(shapes[shape], variants[variant], className)} {...props} />;
 }
+export { variants, shapes, defaultStyles };
