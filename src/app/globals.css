@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,6 +17,22 @@
 		--background-end-rgb: 0, 0, 0;
 	}
 }
+h1 {
+	@apply text-4xl;
+}
+
+h2 {
+	@apply text-3xl;
+}
+h3 {
+	@apply text-2xl;
+}
+h4 {
+	@apply text-xl;
+}
+
+/* Dodaj pozostałe style dla innych elementów */
+
 body {
 	color: rgb(var(--foreground-rgb));
 	background: var(--primary-color);
