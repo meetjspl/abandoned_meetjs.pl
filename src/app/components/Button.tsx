@@ -1,7 +1,7 @@
 import { type ButtonHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
-const defaultStyles = "cursor-pointer m-10 w-60 px-9 py-5 text-2xl";
+const defaultStyles = "cursor-pointer bg-purple m-10  px-8 py-2 text-xl text-green";
 const shapes = {
 	square: "",
 	pill: "rounded-full",
@@ -19,9 +19,14 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 export default function Button({
 	className,
 	variant = "default",
-	shape = "square",
+	shape = "pill",
 	...props
 }: ButtonProps) {
-	return <button className={twMerge(shapes[shape], variants[variant], className)} {...props} />;
+	return (
+		<button
+			className={twMerge(shapes[shape], variants[variant], className, defaultStyles)}
+			{...props}
+		/>
+	);
 }
 export { variants, shapes, defaultStyles };

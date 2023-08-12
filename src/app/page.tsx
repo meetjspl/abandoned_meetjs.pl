@@ -1,14 +1,38 @@
 import Image from "next/image";
 
-import { BsDiscord, BsDownload, BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsDownload } from "react-icons/bs";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
+import Socials from "./components/Socials";
+import Button from "./components/Button";
 
+const navLinks = [
+	{
+		text: "About meet.js",
+		href: "/",
+	},
+	{
+		text: "Summit 2023",
+		href: "/",
+	},
+	{
+		text: "Events",
+		href: "/",
+	},
+	{
+		text: "Join Us",
+		href: "/",
+	},
+	{
+		text: "Support",
+		href: "/",
+	},
+];
 export default function MainPage() {
 	return (
 		<>
 			<main>
-				<Navigation></Navigation>
+				<Navigation links={navLinks}></Navigation>
 				<Header></Header>
 
 				<section className="p-5">
@@ -67,21 +91,11 @@ export default function MainPage() {
 						emotionally engaged from the start! Download our Sponsorship Offer (PDF) to find out
 						more and contact us directly to discuss sponsorship opportunities.
 					</p>
-					<button
-						style={{
-							paddingLeft: "30px",
-							paddingRight: "30px",
-							paddingTop: "8px",
-							paddingBottom: "8px",
-							lineHeight: "normal",
-						}}
-						className="place-self-center rounded-full bg-purple text-xl text-green"
-					>
-						<p>
-							Download offer
-							<BsDownload className="mb-1 ml-3 inline " />
-						</p>
-					</button>
+
+					<Button className="place-self-center">
+						Download offer
+						<BsDownload className="mb-1 ml-3 inline " />
+					</Button>
 				</section>
 			</main>
 			<footer
@@ -91,49 +105,44 @@ export default function MainPage() {
 				<div className="" style={{ padding: "28px 23px" }}>
 					<Image className="" width={100} height={30} src="../logo-no-border.svg" alt={""} />
 				</div>
-				<div className="flex  flex-row" style={{ padding: "28px 23px" }}>
-					<BsTwitter className="text-xl text-white" style={{ margin: "0px 8px" }}></BsTwitter>
-					<BsLinkedin className="text-xl text-white" style={{ margin: "0px 8px" }}></BsLinkedin>
-					<BsFacebook className="text-xl text-white" style={{ margin: "0px 8px" }}></BsFacebook>
-					<BsDiscord className="text-xl text-white" style={{ margin: "0px 8px" }}></BsDiscord>
-				</div>
+				<Socials />
 				<div style={{ padding: "0px 23px" }} className="flex flex-col">
-					<a style={{ fontSize: "14px", padding: "10px 0px " }} href="">
+					<a style={{ padding: "10px 0px " }} href="">
 						Czym jest Meet.JS
 					</a>
-					<a style={{ fontSize: "14px", padding: "10px 0px " }} href="">
+					<a style={{ padding: "10px 0px " }} href="">
 						Summit 2023
 					</a>
-					<a style={{ fontSize: "14px", padding: "10px 0px " }} href="">
+					<a style={{ padding: "10px 0px " }} href="">
 						Wydarzenia
 					</a>
-					<a style={{ fontSize: "14px", padding: "10px 0px " }} href="">
+					<a style={{ padding: "10px 0px " }} href="">
 						Działaj z nami
 					</a>
-					<a style={{ fontSize: "14px", padding: "10px 0px " }} href="">
+					<a style={{ padding: "10px 0px " }} href="">
 						Wsparce
 					</a>
-					<a style={{ fontSize: "14px", padding: "10px 0px " }} href="">
+					<a style={{ padding: "10px 0px " }} href="">
 						meet.js © 2023
 					</a>
 				</div>
 				<div className="m-auto flex flex-col flex-wrap">
-					<a style={{ fontSize: "14px", textAlign: "right", padding: "10px 0px " }} href="">
+					<a style={{ textAlign: "right", padding: "10px 0px " }} href="">
 						#summit_2022
 					</a>
-					<a style={{ fontSize: "14px", textAlign: "right", padding: "10px 0px " }} href="">
+					<a style={{ textAlign: "right", padding: "10px 0px " }} href="">
 						#summit_2021
 					</a>
-					<a style={{ fontSize: "14px", textAlign: "right", padding: "10px 0px " }} href="">
+					<a style={{ textAlign: "right", padding: "10px 0px " }} href="">
 						#summit_2019
 					</a>
-					<a style={{ fontSize: "14px", textAlign: "right", padding: "10px 0px " }} href="">
+					<a style={{ textAlign: "right", padding: "10px 0px " }} href="">
 						#summit_2018
 					</a>
-					<a style={{ fontSize: "14px", textAlign: "right", padding: "10px 0px " }} href="">
+					<a style={{ textAlign: "right", padding: "10px 0px " }} href="">
 						#summit_2017
 					</a>
-					<a style={{ fontSize: "14px", textAlign: "right", padding: "10px 0px " }} href="">
+					<a style={{ textAlign: "right", padding: "10px 0px " }} href="">
 						meet.js code of conduct
 					</a>
 				</div>

@@ -1,30 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
+import { type HtmlHTMLAttributes } from "react";
+import ExternalLink from "./ExternalLink";
 
-export default function Navigation() {
+type NavLink = {
+	text: string;
+	href: string;
+	external?: true;
+};
+type NavProps = { links?: NavLink[] } & HtmlHTMLAttributes<HTMLDivElement>;
+export default function Navigation({ links, ...props }: NavProps) {
 	return (
 		<>
-			<div
-				className=" fixed z-20 flex w-full flex-row-reverse justify-around bg-purple opacity-90 md:bg-transparent"
+			<nav
+				{...props}
+				className=" fixed z-20 flex w-full flex-row-reverse  justify-around bg-purple opacity-90 "
 				style={{ height: 68 }}
 			>
-				<Link className="flex text-end text-white " href={"#about"}>
-					About meet.js
-				</Link>
-				<Link className="flex text-end text-white " href={"/"}>
-					Summit 2023
-				</Link>
-				<Link className="flex text-end text-white " href={"/"}>
-					Events
-				</Link>
-				<Link className="flex text-end text-white " href={"/"}>
-					Join Us
-				</Link>
-				<Link className="flex text-end text-white " href={"/"}>
-					Supprot
-				</Link>
-				<Image className="pl-4 pt-4" width={100} height={30} src="../logo-no-border.svg" alt={""} />
-			</div>
+				{links?.map((link) =>
+					link.external ? (
+						<ExternalLink
+							key={link.text}
+							className="flex flex-wrap   content-center text-white "
+							href={link.href}
+						>
+							{link.text}
+						</ExternalLink>
+					) : (
+						<Link
+							key={link.text}
+							className="flex flex-wrap   content-center text-white "
+							href={link.href}
+						>
+							{link.text}
+						</Link>
+					),
+				)}
+				<Image
+					className="justify-center pl-4  pt-4"
+					width={100}
+					height={30}
+					src="../logo-no-border.svg"
+					alt={""}
+				/>
+			</nav>
 		</>
 	);
 }

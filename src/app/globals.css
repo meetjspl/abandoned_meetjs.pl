@@ -30,6 +30,9 @@ h3 {
 h4 {
 	@apply text-xl;
 }
+a {
+	@apply text-base;
+}
 
 /* Dodaj pozostałe style dla innych elementów */
 
